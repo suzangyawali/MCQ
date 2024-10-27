@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-blue-50 to-indigo-50 min-h-screen;
+  }
+}
+
+@layer components {
+  .quiz-option {
+    @apply w-full text-left p-4 rounded-xl flex items-center space-x-3 
+           transition-all duration-300 ease-in-out transform hover:scale-102
+           border-2 shadow-sm hover:shadow-md;
+  }
+
+  .quiz-option-selected {
+    @apply border-blue-500 bg-blue-50 shadow-md;
+  }
+
+  .quiz-option-default {
+    @apply border-gray-200 hover:border-blue-300 hover:bg-white;
+  }
+}
+
+@layer utilities {
+  .scale-102 {
+    transform: scale(1.02);
+  }
+}
